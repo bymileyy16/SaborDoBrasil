@@ -1,1 +1,95 @@
-TESTE
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sabor do Brasil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <!-- Container Principal -->
+    <div class="container-fluid min-vh-100 d-flex flex-column">
+        <div class="row flex-grow-1">
+
+            <!-- COLUNA 1: Perfil -->
+            <aside class="col-md-3 bg-light p-3 border-end">
+                <div class="text-center">
+                    <img src="img/salada.png" width="100" height="100" class="img-fluid" alt="Logo da empresa">
+                    <h4 class="mt-3">Sabor do Brasil</h4>
+                    <hr style="border: 2px solid #d86d10;">
+                </div>
+                <div class="text-center">
+                    <p>Likes: <span id="total-likes">9</span></p>
+                    <p>Dislikes: <span id="total-dislikes">12</span></p>
+                </div>
+            </aside>
+
+            <!-- COLUNA 2: Main -->
+            <main class="col-md-6 p-6 border" style="border-color: #C2BEBE;">
+                <h2 class="text-center text-black">Publicações</h2>
+
+                <!-- Publicações Dinâmicas -->
+                <div id="posts">
+                    <img src="img/publicacao01.png" width="800" height="800" class="img-fluid" alt="...">
+                    <!-- Cada publicação será renderizada via JS -->
+                </div>
+            </main>
+
+            <!-- COLUNA 3: Login -->
+            <aside class="col-md-3 bg-light d-flex align-items-start justify-content-center p-3">
+                <button id="login-btn" class="btn text-white fw-bold" style="background-color: #D97014;">Entrar</button>
+            </aside>
+        </div>
+
+        <!-- MODAL LOGIN -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="login-form">
+                    <div class="mb-3">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="senha">Senha:</label>
+                      <input type="password" class="form-control" id="senha" required>
+                    </div>
+                    <div class="text-danger" id="login-error" style="display: none;">Usuário ou senha incorretos</div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn border text-warning" style="border-color: #D97014;" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn text-white" style="background-color: #D97014;" form="login-form" id="login-btn-submit">Entrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!-- RODAPÉ -->
+        <footer class="row bg-warning text-white text-center p-2" style="background-color: #D97014;">
+            <div class="col">
+                Sabor do Brasil
+                <img src="img/insta.png" width="50" height="50" alt="Instagram">
+                <img src="img/x.png" width="40" height="40" alt="Twitter">
+                <img src="img/zap.png" width="50" height="50" alt="WhatsApp">
+                <img src="img/globe.png" width="40" height="40" alt="Site">
+                <span>Copyright - 2024</span>
+            </div>
+        </footer>
+    </div>
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Seu script -->
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
